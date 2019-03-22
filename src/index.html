@@ -4,22 +4,29 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Weekday Calculator</title>
+    <title>Planets</title>
 </head>
 <body>
-    <h1>What day of the week is it?</h1>
-    <h2>Select any date and see what day of the week it is</h2>
+    <h1>Planet Age</h1>
+    <h3>Please Enter Your Birthday</h3>
     <div class="container">
-        <div class="weekday-form">
-            <form id="weekdayForm">
+        <div>
+            <form id="inputForm">
                 <label for="dayInput">Enter a day:</label>
                 <input id="dayInput" type="number" required min="1" max="31" placeholder="1-31"></input>
+                <br>
                 <br>
                 <label for="monthInput">Enter a month:</label>
                 <input id="monthInput" type="number" required min="1" max="12" placeholder="1-12"></input>
                 <br>
+                <br>
                 <label for="yearInput">Enter a year:</label>
                 <input id="yearInput" type="number" required min="0001" placeholder="Four Digit Year"></input>
+                <br>
+                <br>
+                <label for="expectancyInput">Estimate Your Life Expectancy</label>
+                <input id="expectancyInput" type="number" required min="1" placeholder="Estimate Your Life Expectancy"></input>
+                <br>
                 <br>
                 <button id="dateButton" type="submit">Submit</button>
             </form>
@@ -28,7 +35,3 @@
     </div>
 </body>
 </html>
-
-
-<!-- <label for="dateInput">Enter a day:</label>
-<input id="dateInput" type="number"></input> -->
