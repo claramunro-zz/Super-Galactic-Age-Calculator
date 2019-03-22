@@ -12,11 +12,6 @@ export default class Birthday {
     return age;
   }
 
-  convertAgeToSeconds(age) {
-    let secondsAge = Math.floor(age / 31536000);
-    return secondsAge;
-  }
-
 
 
   mercuryAge(age) {

@@ -1,4 +1,4 @@
-/* eslint-disable no-console */
+
 import Birthday from './userForm.js';
 import $ from 'jquery';
 import 'bootstrap';
@@ -15,11 +15,12 @@ $(document).ready(function () {
     let birthdayInput = new Birthday(yearInput, monthInput, dayInput);
 
     let age = Birthday.calcAge(birthdayInput);
-    console.log(age);
-    let earthAge = Birthday.convertAgeToSeconds(age);
-    console.log(earthAge);
 
+    let mercuryAge = Birthday.mercuryAge(age);
+  
+    
+    $("#result").text(`${age} ${mercuryAge}`);
 
 
   });
-});
+});  
