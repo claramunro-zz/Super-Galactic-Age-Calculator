@@ -1,14 +1,15 @@
 export default class Birthday {
-  constructor(year, month, day) {
+  constructor(year, month, day, expectancy) {
     this.year = year;
     this.month = month;
     this.day = day;
+    this.expectancy = expectancy;
   }
 
   calcAge(birthdayInput) {
     const birthdaydate = new Date(birthdayInput.year, birthdayInput.month, birthdayInput.day);
     const today = new Date();  // todays date
-    const age = today - birthdaydate;
+    let age = today - birthdaydate;
     return age;
   }
 

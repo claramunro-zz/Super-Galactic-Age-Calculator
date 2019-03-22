@@ -10,16 +10,13 @@ $(document).ready(function () {
     const dayInput = parseInt($("#dayInput")).val();
     const monthInput = parseInt($("#monthInput")).val();
     const yearInput = parseInt($("#yearInput")).val();
-    // const expectancyInput = parseInt($("#expectancyInput")).val();
+    const expectancy = parseInt($("#expectancyInput")).val();
 
-    let birthdayInput = new Birthday(yearInput, monthInput, dayInput);
-
-    let age = Birthday.calcAge(birthdayInput);
-
-    let mercuryAge = Birthday.mercuryAge(age);
-  
+    let birthdayInput = new Birthday(yearInput, monthInput, dayInput, expectancy);
     
-    $("#result").text(`${age} ${mercuryAge}`);
+    let age = Birthday.calcAge(birthdayInput);  
+    
+    $("#result").text(`${age}`);
 
 
   });
