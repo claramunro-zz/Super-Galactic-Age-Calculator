@@ -1,55 +1,21 @@
 # Super Galactic Age Calculator
 
 ## Description
-A webpage that takes 3 indivivual lines of user input, each input is for each line in the Haiku, and checks to see if the result is infact a Haiku.
+An application that determines a user’s age based on a planet’s solar years
 
 ## Specifications
 
-#### Behavior: Checks for Open Syllables & return # of syllables
-A single-letter vowel which occurs at the end of the syllable. This syllable pattern follows the spelling rules: A E O U usually say their names at the end of the syllalble, and I and Y may say their long or short sound at the end of the syllable. For example: me, cry, ta-ble, pro-tect.
-* Input: "ta-ble"
-* Output: "2"
+* Input: User age from their birthday input
+* Input: life expectancy in years
+* Output: User age in Earth Years, Mercury Years, Venus Years, Mars Years & Jupiter Years
+* Output: Users number of remaining years on Earth, Mercury, Venus, Mars & Jupiter
+* Output: If User has already lived past life expectancy, return how many years have past.
 
-#### Behavior: Checks for Closed Syllables & return # of syllables
-A closed syllable includes a single-letter vowel but the syllable ends in a consonant. In this case the single letter vowel says its short sound. For example: duck, patch, hap-pen, din-ner.
-* Input: "hap-pen"
-* Output: "2"
-
-#### Behavior: Checks for Multi-Letter Vowel Syllables & return # of syllables
-Multi-letter vowels are two or more letters working together to form a single vowel phonogram. (igh, ea, ui, oa, etc.) For example: night, read, fruit, boat.
-* Input: "boat"
-* Output: "1"
-
-#### Behavior: Checks for Consonant + le Syllables (or Consonant + re) & return # of syllables
-These words have a final syllable with a silent final E. They follow the spelling rule: Every syllable must have a written vowel. For example: ti-tle, puz-zle, un-cle, drib-ble, a-cre, mas-sa-cre.
-* Input: "mas-sa-cre"
-* Output: "3"
-
-#### Behavior: Checks for Vowel + R Syllables & return # of syllables
-The consonant R often distorts the vowel sound of the preceeding vowel. These syallables include the phonograms: ar, er, ir, or, ur, ear, wor. For example: car, her, bird, born, surface, early, word.
-* Input: "surface"
-* Output: "1"
-
--------
-
-#### Behavior: Checks 1st line of user input for 5 syllables
-* Input: "pretend this line has 5 syllables"
-* Output: "True"
-
-#### Behavior: Checks 2nd line of user input for 7 syllables
-* Input: "pretend this line has 7 syllables"
-* Output: "True"
-
-#### Behavior: Checks 3rd line of user input for 5 syllables
-* Input: "pretend this line has 5 syllables"
-* Output: "True"
-
-#### Behavior: Returns true / false if it is haiku or nah
-* Input: "5,7,5"
-* Output: "True"
-
-
-
+    * Earth Year: 1 Earth Year (365 days)
+    * Mercury Year: .24 Earth Years
+    * Venus Year: .62 Earth Years
+    * Mars Year: 1.88 Earth Years
+    * Jupiter Year: 11.86 Earth Years
 
 ### Setup Instructions
 * Clone this repository to your desktop using "git clone""(repository link).""
@@ -60,6 +26,8 @@ The consonant R often distorts the vowel sound of the preceeding vowel. These sy
 * In your terminal: "$ npm i" (assuming all packages needed are in package.JSON file)
 * In your terminal: "$ npm run build"
 * In your terminal: "$ npm run start" or "$ npm run test"
+
+Make sure you have Node.js installed.
 
 ### Known Bugs
 * No known bugs
