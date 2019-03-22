@@ -6,12 +6,21 @@ export default class Birthday {
     this.expectancy = expectancy;
   }
 
-  ageCalc() {
-    let birthdaydate = new Date(this.year, this.month, this.day);
+
+  calcAge(birthday) {
+    let birthdaydate = new Date(birthday.year, birthday.month, birthday.day);
     let today = new Date();  // todays date
     let earthAge = (today - birthdaydate);
+    console.log(earthAge);
     return earthAge;
   }
+
+  calcExpectancy(age) {
+    const expectancyLeft = this.expectancy - age;
+    return expectancyLeft;
+  }
+
+
 
   mercuryAge(earthAge) {
     earthAge = earthAge/.24;
