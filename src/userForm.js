@@ -6,33 +6,31 @@ export default class Birthday {
     this.expectancy = expectancy;
   }
 
-  calcAge(birthdayInput) {
-    const birthdaydate = new Date(birthdayInput.year, birthdayInput.month, birthdayInput.day);
-    const today = new Date();  // todays date
-    let age = today - birthdaydate;
-    return age;
+  calcAge() {
+    let birthdaydate = new Date(this.year, this.month, this.day);
+    let today = new Date();  // todays date
+    let earthAge = (today - birthdaydate);
+    return earthAge;
   }
 
-
-
-  mercuryAge(age) {
-    age = age/.24;
-    return age;
+  mercuryAge(earthAge) {
+    earthAge = earthAge/.24;
+    return earthAge;
   }
 
-  venusAge(age) {
-    age = age/.62;
-    return age;
+  venusAge(earthAge) {
+    earthAge = earthAge/.62;
+    return earthAge;
   }
 
-  marsAge(age) {
-    age = age/1.88;
-    return age;
+  marsAge(earthAge) {
+    earthAge = earthAge/1.88;
+    return earthAge;
   }
 
-  jupiterAge(age) {
-    age = age/11.86;
-    return age;
+  jupiterAge(earthAge) {
+    earthAge = earthAge/11.86;
+    return earthAge;
   }
 
 
