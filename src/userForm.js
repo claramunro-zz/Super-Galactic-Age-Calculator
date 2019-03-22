@@ -6,7 +6,7 @@ export default class Birthday {
     this.expectancy = expectancy;
   }
 
-  calcAge() {
+  ageCalc() {
     let birthdaydate = new Date(this.year, this.month, this.day);
     let today = new Date();  // todays date
     let earthAge = (today - birthdaydate);

@@ -8,18 +8,18 @@ $(document).ready(function () {
   $("#inputForm").submit(function (event) {
     event.preventDefault();
 
-    let infoo = new Birthday();
+    let birthday = new Birthday();
 
-    let dayInput = $("#dayInput").val();
-    let monthInput = $("#monthInput").val();
-    let yearInput = $("#yearInput").val();
-    let expectancy = $("#expectancyInput").val();
+    let dayInput = parseInt($("#dayInput").val());
+    let monthInput = parseInt($("#monthInput").val());
+    let yearInput = parseInt($("#yearInput").val());
+    let expectancy = parseInt($("#expectancyInput").val());
     console.log(dayInput);
 
-    infoo = new Birthday(yearInput, monthInput, dayInput, expectancy);
-    console.log(infoo);
+    birthday = new Birthday(yearInput, monthInput, dayInput, expectancy);
+    console.log(birthday);
 
-    let earthAge = Birthday.calcAge(infoo);
+    let earthAge = Birthday.ageCalc();
   
     // let mercuryAge = Birthday.mercuryAge(earthAge); 
     // let venusAge = Birthday.venusAge(earthAge);
