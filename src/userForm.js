@@ -1,9 +1,8 @@
 export default class Date {
-  constructor(year, month, day, countDays) {
+  constructor(year, month, day) {
     this.year = year;
     this.month = month;
     this.day = day;
-    this.countDays = countDays;
   }
 
   leapYearAddDays(year, countDays) {
