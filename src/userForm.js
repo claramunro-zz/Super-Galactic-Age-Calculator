@@ -5,22 +5,39 @@ export default class Birthday {
     this.day = day;
   }
 
-  dateBirthday(birthday) {
-    const birthdaydate = new Date(birthday.year, birthday.month, birthday.day);
-    return birthdaydate;
-  }
-
-  calcAge(birthday) {
+  calcAge(birthdayInput) {
+    const birthdaydate = new Date(birthdayInput.year, birthdayInput.month, birthdayInput.day);
     const today = new Date();  // todays date
-    const birthdaydate = Birthday.dateBirthday(birthday);
     const age = today - birthdaydate;
-    console.log(age);
     return age;
   }
 
+  convertAgeToSeconds(age) {
+    let secondsAge = Math.floor(age / 31536000);
+    return secondsAge;
+  }
 
 
 
+  mercuryAge(age) {
+    age = age/.24;
+    return age;
+  }
+
+  venusAge(age) {
+    age = age/.62;
+    return age;
+  }
+
+  marsAge(age) {
+    age = age/1.88;
+    return age;
+  }
+
+  jupiterAge(age) {
+    age = age/11.86;
+    return age;
+  }
 
 
 
