@@ -6,42 +6,52 @@ export default class Birthday {
     this.expectancy = expectancy;
   }
 
-
-  calcAge(birthday) {
-    let birthdaydate = new Date(birthday.year, birthday.month, birthday.day);
-    let today = new Date();  // todays date
+  // calculate earthage
+  calcAge() {
+    let today = new Date();
+    let birthdaydate = new Date(this.year, this.month, this.day);
     let earthAge = (today - birthdaydate);
-    console.log(earthAge);
+    earthAge = Math.floor(earthAge / 3.154e+10);  // miliseconds peryear
     return earthAge;
   }
 
-  calcExpectancy(age) {
-    const expectancyLeft = this.expectancy - age;
-    return expectancyLeft;
+  mercuryAge(age) {
+    age *= .24;
+    return age.toFixed(1);
   }
 
-
-
-  mercuryAge(earthAge) {
-    earthAge = earthAge/.24;
-    return earthAge;
+  venusAge(age) {
+    age *= .62;
+    return age.toFixed(1);
   }
 
-  venusAge(earthAge) {
-    earthAge = earthAge/.62;
-    return earthAge;
+  marsAge(age) {
+    age *= 1.88;
+    return age.toFixed(1);
   }
 
-  marsAge(earthAge) {
-    earthAge = earthAge/1.88;
-    return earthAge;
+  jupiterAge(age) {
+    age *= 11.86;
+    return age.toFixed(1);
   }
 
-  jupiterAge(earthAge) {
-    earthAge = earthAge/11.86;
-    return earthAge;
+  earthExepectancy(age) {
+    let yearsLeft = this.expectancy - age;
+    return yearsLeft;
   }
 
+  mercuryExepectancy(mercuryAge) {
+    let mercuryYearsLeft = this.expectancy * .24;
+    let yearsLeft = mercuryYearsLeft - mercuryAge;
+    
+    return yearsLeft;
+
+    // if less than 0
+    // show # years that have passed
+
+    // else
+    // show # years left
+  }
 
 
 }
