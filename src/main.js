@@ -42,23 +42,24 @@ $(document).ready(function () {
 
     // EXPECTANCY SECTION
 
-    let earthExepectancy = birthday.earthExepectancy(age);
+    let earthExepectancy = birthday.earthExpectancy(age);
     console.log(earthExepectancy);
-
-    let mercuryExepectancy = birthday.mercuryExepectancy(mercuryAge);
+    let mercuryExepectancy = birthday.mercuryExpectancy(mercuryAge);
     console.log(mercuryExepectancy);
+    let venusExpectancy = birthday.venusExpectancy(venusAge);
+    console.log(venusExpectancy);
+    let marsExpectancy= birthday.marsExpectancy(marsAge);
+    console.log(marsExpectancy);
+    let jupiterExpectancy = birthday.jupiterExpectancy(jupiterAge);
+    console.log(jupiterExpectancy);
 
-    // let venusExpectancy = birthday.venusExpectancy(venusAge, expectancy);
-    // let marsExpectancy= birthday.marsExpectancy(marsAge, expectancy);
-    // let jupiterExpectancy = birthday.jupiterExpectancy(jupiterAge, expectancy);
-
-    // $("#resultExpectancy").text(`
-    // ${expectancy} Earth years left,
-    // ${mercuryExepectancy} Mercury years left,
-    // ${venusExpectancy} Venus years left,
-    // ${marsExpectancy} Mars years left,
-    // ${jupiterExpectancy} Jupiter years left,
-    // `);
+    $("#resultExpectancy").text(`
+    ${earthExepectancy},
+    ${mercuryExepectancy},
+    ${venusExpectancy},
+    ${marsExpectancy},
+    ${jupiterExpectancy},
+    `);
     
 
   });

@@ -35,23 +35,57 @@ export default class Birthday {
     return age.toFixed(1);
   }
 
-  earthExepectancy(age) {
+  earthExpectancy(age) {
     let yearsLeft = this.expectancy - age;
-    return yearsLeft;
+    if (yearsLeft < 0) {
+      let absNum = Math.abs(yearsLeft);
+      return `You've lived ${absNum} year/s past your life expectancy of ${this.expectancy} year/s`;
+    }
+    return `You still have ${yearsLeft} years till you reach your life expectancy of ${this.expectancy} year/s`;
   }
 
-  mercuryExepectancy(mercuryAge) {
+  mercuryExpectancy(mercuryAge) {
     let mercuryYearsLeft = this.expectancy * .24;
     let yearsLeft = mercuryYearsLeft - mercuryAge;
-    
-    return yearsLeft;
-
-    // if less than 0
-    // show # years that have passed
-
-    // else
-    // show # years left
+    if (yearsLeft < 0) {
+      let absNum = Math.abs(yearsLeft);
+      return `You've lived ${absNum} year/s past your life expectancy of ${mercuryYearsLeft} year/s`;
+    }
+    return `You still have ${yearsLeft} years till you reach your life expectancy of ${mercuryYearsLeft} year/s`;
   }
 
+  venusExpectancy(venusAge) {
+    let venusYearsLeft = this.expectancy * .62;
+    let yearsLeft = venusYearsLeft - venusAge;
+    if (yearsLeft < 0) {
+      let absNum = Math.abs(yearsLeft);
+      return `You've lived ${absNum} year/s past your life expectancy of ${venusYearsLeft} year/s`;
+    }
+    return `You still have ${yearsLeft} years till you reach your life expectancy of ${venusYearsLeft} year/s`;
+  }
+
+  marsExpectancy(marsAge) {
+    let marsYearsLeft = this.expectancy * 1.88;
+    let yearsLeft = marsYearsLeft - marsAge;
+    if (yearsLeft < 0) {
+      let absNum = Math.abs(yearsLeft);
+      return `You've lived ${absNum} year/s past your life expectancy of ${marsYearsLeft} year/s`;
+    }
+    return `You still have ${yearsLeft} years till you reach your life expectancy of ${marsYearsLeft} year/s`;
+  }
+
+  jupiterExpectancy(jupiterAge) {
+    let jupiterYearsLeft = this.expectancy * 11.86;
+    let yearsLeft = jupiterYearsLeft - jupiterAge;
+    if (yearsLeft < 0) {
+      let absNum = Math.abs(yearsLeft);
+      return `You've lived ${absNum} year/s past your life expectancy of ${jupiterYearsLeft} year/s`;
+    }
+    return `You still have ${yearsLeft} years till you reach your life expectancy of ${jupiterYearsLeft} year/s`;
+  }
 
 }
+
+
+
+   
